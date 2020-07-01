@@ -43,7 +43,6 @@ class Heos1Screen(Screen):
         self.mute = self.openhab.get_item("HEOS1Mute")
 
     def button_2_label(self) -> str:
-        print(self.play.state)
         if self.play.state == 'PLAY':
             return '\uecaa'
         else:
@@ -56,7 +55,6 @@ class Heos1Screen(Screen):
             self.play.play()
 
     def button_4_label(self) -> str:
-        print(self.mute.state)
         if self.mute.state == 'ON':
             return '\uecb8'
         else:
